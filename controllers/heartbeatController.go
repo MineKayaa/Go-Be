@@ -14,6 +14,12 @@ func CreateHeartbeats(c *gin.Context) {
 		DeviceID []int
 	}
 
+	var test struct {
+		DeviceID int
+	}
+
+	test.DeviceID = 1
+
 	c.Bind(&body)
 
 	for deviceId := range body.DeviceID {
